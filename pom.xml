@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.daodao</groupId>
-    <artifactId>Neo4j_Client</artifactId>
+    <artifactId>neo4j-client</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>Neo4j_Client</name>
+    <description>Neo4j Graph Database Client for Testing Functionality</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -14,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <lombok.version>1.18.30</lombok.version>
         <slf4j.version>1.7.32</slf4j.version>
-        <logback.version>1.4.14</logback.version>
+        <logback.version>1.2.12</logback.version>
 
         <neo4j.version>4.4.3</neo4j.version>
         <junit-jupiter.version>5.10.0</junit-jupiter.version>
@@ -37,6 +39,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -92,6 +99,7 @@
                 <configuration>
                     <mainClass>org.daodao.jdbc.Neo4jMainApplication</mainClass>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>

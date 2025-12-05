@@ -19,7 +19,7 @@ class Neo4jCRUDTest {
 
     @BeforeEach
     void setUp() {
-        Neo4jConfig config = new Neo4jConfig("bolt://localhost:7687", "neo4j", "Daodao_201314", "neo4j");
+        Neo4jConfig config = new Neo4jConfig();
         connector = new Neo4jConnector(config);
         movieService = new Neo4jMovieService(connector);
         initializer = new Neo4jDatabaseInitializer(connector);
